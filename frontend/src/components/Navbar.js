@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const universityPaths = 
           location.pathname === '/UniDashboard' || 
-          location.pathname === '/UniReservations' ||
+          location.pathname === '/UniEvents' ||
           location.pathname === '/UniSettings';
 
     const rsoPaths = 
@@ -86,10 +86,10 @@ const Navbar = () => {
             <div className="navbar-menu">
 
               <Link to="/UniDashboard">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Search for Rooms</button>
+                <button className="navbar-menu-text" onClick={toggleMenu}>University Dashboard</button>
               </Link>
-              <Link to="/UniReservations">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Manage Reservations</button>
+              <Link to="/UniEvents">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Manage Events</button>
               </Link>
               <Link to="/UniSettings">
                 <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
@@ -102,17 +102,27 @@ const Navbar = () => {
           )}
           {isMenuOpen && rsoPaths && (
             <div className="navbar-menu">
+              <Link to="/RSODashboard">
+                <button className="navbar-menu-text" onClick={toggleMenu}>RSO Dashboard</button>
+              </Link>
+              <Link to="/RSOSettings">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
+              </Link>
+              <Link to="/">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Log Out</button>
+              </Link>
 
-              {/* <Link to="/UniHomePage">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Home</button>
-              </Link> */}
-              <Link to="/RSOSearch">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Manage Organizations</button>
+            </div>
+          )}
+          {isMenuOpen && studentsPaths && (
+            <div className="navbar-menu">
+              <Link to="/StudentDashboard">
+                <button className="navbar-menu-text" onClick={toggleMenu}>RSO Dashboard</button>
               </Link>
-              <Link to="/UniReservationsPage">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Manage Reservations</button>
+              <Link to="/StudentEvents">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
               </Link>
-              <Link to="/UniSettingsPage">
+              <Link to="/StudentSettings">
                 <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
               </Link>
               <Link to="/">

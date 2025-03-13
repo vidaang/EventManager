@@ -91,7 +91,6 @@ function CreateAccount() {
           required ref={(c) => (createAccountType = c)}>
           <option value="" disabled selected>Select account type</option>
           <option value="option1">University</option>
-          <option value="option2">RSO</option>
           <option value="option3">Student</option>
         </select>
         <br />

@@ -234,7 +234,7 @@ export default function AdminDashboard() {
         <thead>
           <tr>
           {/* HEADINGS FOR THE DIFFERENT TABLE TABS */}
-          {activeTab === "Pending" && 
+            {activeTab === "Pending" && 
               <>
                 <th>University Name</th>
                 <th>Status</th>
