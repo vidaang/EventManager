@@ -4,8 +4,7 @@ CREATE TABLE Users (
     last_name VARCHAR(100),
     email VARCHAR(255) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
-    role ENUM('admin', 'university', 'rso', 'student') NOT NULL,
-    NULL
+    role ENUM('admin', 'university', 'rso', 'student') NOT NULL
 );
 
 CREATE TABLE Universities (
@@ -14,9 +13,10 @@ CREATE TABLE Universities (
     location TEXT NOT NULL,
     description TEXT,
     num_students INT,
-    image_url TEXT
+    image_url TEXT,
     status ENUM('pending', 'active') DEFAULT 'pending',
-    FOREIGN KEY user_id REFERENCES Users,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
 CREATE TABLE RSOs (
@@ -40,12 +40,13 @@ CREATE TABLE RSO_Memberships (
 
 CREATE TABLE Students (
     university_id INT NOT NULL,
-    membership_id INT PRIMARY KEY AUTO_INCREMENT,
+    membership_id INT NOT NULL,
     user_id INT NOT NULL,
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
     FOREIGN KEY (university_id) REFERENCES Universities(university_id),
     FOREIGN KEY (membership_id) REFERENCES RSO_Memberships(membership_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-)
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
 
 CREATE TABLE Events (
     event_id INT PRIMARY KEY AUTO_INCREMENT,
