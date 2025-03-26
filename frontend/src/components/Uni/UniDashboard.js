@@ -212,7 +212,7 @@ export default function UniDashboard() {
 
   return (
     <div>
-      <h2>Uni Dashboard</h2>
+      <h2>University Dashboard</h2>
       <div className="table-tabs">
         <button
           className={`admin-tabs ${activeTab === "PendingRSO" ? "active" : ""}`}

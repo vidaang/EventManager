@@ -23,7 +23,6 @@ const baseUrl = "http://localhost:5000";
 function LargeCalendar()
 {
     const [selectedEvent, setSelectedEvent] = useState(null);
-    const [selectedItem, setSelectedItem] = useState(null);
     const [events, setEvents] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [comment, setComment] = useState("");
