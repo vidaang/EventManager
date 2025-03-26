@@ -12,6 +12,13 @@ import AdminSettingsPage from './pages/Admin/AdminSettingsPage';
 import UniDashboardPage from './pages/Uni/UniDashboardPage';
 import UniEventsPage from './pages/Uni/UniEventsPage';
 import UniSettingsPage from './pages/Uni/UniSettingsPage';
+import RSODashboardPage from './pages/RSO/RSODashboardPage';
+import RSOCreateEventPage from './pages/RSO/RSOCreateEventPage';
+import RSOEventsPage from './pages/RSO/RSOEventsPage';
+import RSOSettingsPage from './pages/RSO/RSOSettingsPage';
+import StdDashboardPage from './pages/Std/StdDashboardPage';
+import StdEventsPage from './pages/Std/StdEventsPage';
+import StdSettingsPage from './pages/Std/StdSettingsPage';
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -30,7 +37,13 @@ function App() {
           <Route path="/UniDashboard" element={<UniDashboardPage />} />
           <Route path="/UniEvents" element={<UniEventsPage />} />
           <Route path="/UniSettings" element={<UniSettingsPage />} />
-
+          <Route path="/RSODashboard" element={<RSODashboardPage />} />
+          <Route path="/RSOCreateEvent" element={<RSOCreateEventPage />} />
+          <Route path="/RSOEvents" element={<RSOEventsPage />} />
+          <Route path="/RSOSettings" element={<RSOSettingsPage />} />
+          <Route path="/StudentDashboard" element={<StdDashboardPage />} />
+          <Route path="/StudentEvents" element={<StdEventsPage />} />
+          <Route path="/StudentSettings" element={<StdSettingsPage />} />
         </Routes>
       </BrowserRouter>
     </MantineProvider>

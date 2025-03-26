@@ -18,16 +18,14 @@ const Navbar = () => {
 
     const rsoPaths = 
           location.pathname === '/RSODashboard' || 
-          location.pathname === '/RSOSearch' ||
-          location.pathname === '/RSOReservations' ||
+          location.pathname === '/RSOCreateEvent' ||
+          location.pathname === '/RSOEvents' ||
           location.pathname === '/RSOSettings';
     
     const studentsPaths = 
-          location.pathname === '/StudentsDashboard' || 
-          location.pathname === '/StudentsEvents' ||
-          location.pathname === '/StudentsMemberships' ||
-          location.pathname === '/StudentsSettings' ||
-          location.pathname === '/';
+          location.pathname === '/StudentDashboard' || 
+          location.pathname === '/StudentEvents' ||
+          location.pathname === '/StudentSettings'
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
@@ -105,6 +103,12 @@ const Navbar = () => {
               <Link to="/RSODashboard">
                 <button className="navbar-menu-text" onClick={toggleMenu}>RSO Dashboard</button>
               </Link>
+              <Link to="/RSOCreateEvent">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Create Event</button>
+              </Link>
+              <Link to="/RSOEvents">
+                <button className="navbar-menu-text" onClick={toggleMenu}>Manage Events</button>
+              </Link>
               <Link to="/RSOSettings">
                 <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
               </Link>
@@ -117,10 +121,10 @@ const Navbar = () => {
           {isMenuOpen && studentsPaths && (
             <div className="navbar-menu">
               <Link to="/StudentDashboard">
-                <button className="navbar-menu-text" onClick={toggleMenu}>RSO Dashboard</button>
+                <button className="navbar-menu-text" onClick={toggleMenu}>Student Dashboard</button>
               </Link>
               <Link to="/StudentEvents">
-                <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
+                <button className="navbar-menu-text" onClick={toggleMenu}>Find Events</button>
               </Link>
               <Link to="/StudentSettings">
                 <button className="navbar-menu-text" onClick={toggleMenu}>Settings</button>
