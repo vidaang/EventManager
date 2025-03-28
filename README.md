@@ -5,9 +5,26 @@ This is a full-stack web application designed to help university students organi
 
 ## Tech Stack
 - Frontend: React (JavaScript, HTML, CSS)
-- Backend: PHP (REST API)
+- Backend: Express JS
 - Database: MySQL
-- Server: Apache (LAMP Stack)
+- Server: AWS RDS
+
+## Installation & Setup
+### Prerequisites
+- Install MySQL version 8.0 on your local
+- Install Node.js and npm for React frontend.
+- Run `npm install mysql2 express cors dotenv nodemon`
+
+### Running the Backend Server
+1. Navigate to the /backend folder
+2. Add the backend .env file to the directory
+3. Run the command `node server.js`
+
+### Running the Frontend Server
+1. Navigate to the /frontend folder
+2. Add the frontend .env file to the directory
+3. Run the command `npm run build` to build the directory
+4. Run the command `npm start` to launch the application
 
 ## Features
 ### User Roles
@@ -28,7 +45,3 @@ This is a full-stack web application designed to help university students organi
 - Commenting and rating events (1-5 stars).
 - Integration with social media (Facebook, Google, etc.).
 
-## Installation & Setup
-### Prerequisites
-- Install Apache, MySQL, and PHP (LAMP Stack) if not already set up.
-- Install Node.js and npm for React frontend.
